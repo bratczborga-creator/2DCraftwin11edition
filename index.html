@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2D Craft - Menu</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="menu-screen">
+      <header class="logo-wrap">
+        <h1 class="logo">2DCRAFT</h1>
+        <p class="subtitle">Win11 Edition</p>
+      </header>
+
+      <section class="panel" aria-label="Główne menu">
+        <button class="mc-btn" data-action="play">▶ Graj</button>
+        <button class="mc-btn" data-action="options">⚙ Opcje</button>
+        <button class="mc-btn" data-action="help">❓ Pomoc</button>
+        <button class="mc-btn" data-action="quit">✖ Wyjście</button>
+      </section>
+
+      <section class="dialog hidden" id="dialog" role="status" aria-live="polite">
+        <h2 id="dialog-title">Informacja</h2>
+        <p id="dialog-message"></p>
+        <button class="mc-btn small" id="close-dialog">Zamknij</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
