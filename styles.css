@@ -1,0 +1,122 @@
+:root {
+  --bg-dark: #1b1b1b;
+  --bg-mid: #2a2a2a;
+  --bg-light: #3b3b3b;
+  --line: #0f0f0f;
+  --line-light: #6f6f6f;
+  --text: #f3f3f3;
+  --accent: #6cc04a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  color: var(--text);
+  background:
+    linear-gradient(180deg, #7ab8ff 0%, #87ceeb 45%, #5da5f3 100%);
+}
+
+.menu-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background-image:
+    linear-gradient(45deg, rgb(0 0 0 / 0.18) 25%, transparent 25%),
+    linear-gradient(-45deg, rgb(0 0 0 / 0.18) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgb(0 0 0 / 0.18) 75%),
+    linear-gradient(-45deg, transparent 75%, rgb(0 0 0 / 0.18) 75%);
+  background-size: 24px 24px;
+  background-position: 0 0, 0 12px, 12px -12px, -12px 0;
+}
+
+.logo-wrap {
+  text-align: center;
+  text-shadow: 3px 3px 0 #000;
+}
+
+.logo {
+  margin: 0;
+  font-size: clamp(2.4rem, 8vw, 4.5rem);
+  letter-spacing: 0.2rem;
+}
+
+.subtitle {
+  margin: 0.2rem 0 0;
+  font-size: 1rem;
+  color: #ffef7a;
+}
+
+.panel,
+.dialog {
+  width: min(90vw, 420px);
+  padding: 1rem;
+  border: 4px solid var(--line);
+  background: linear-gradient(180deg, var(--bg-light), var(--bg-mid));
+  box-shadow: inset -2px -2px 0 #111, inset 2px 2px 0 var(--line-light), 6px 6px 0 rgb(0 0 0 / 0.35);
+}
+
+.panel {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.mc-btn {
+  appearance: none;
+  border: 3px solid var(--line);
+  border-right-color: #151515;
+  border-bottom-color: #151515;
+  border-top-color: #9c9c9c;
+  border-left-color: #9c9c9c;
+  background: linear-gradient(180deg, #8b8b8b, #696969);
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: 0.04rem;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0 #000;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  transition: transform 0.04s ease, filter 0.08s ease;
+}
+
+.mc-btn:hover {
+  filter: brightness(1.15);
+}
+
+.mc-btn:active {
+  transform: translateY(2px);
+  border-top-color: #4a4a4a;
+  border-left-color: #4a4a4a;
+  border-right-color: #9c9c9c;
+  border-bottom-color: #9c9c9c;
+}
+
+.mc-btn.small {
+  margin-top: 0.8rem;
+  width: 100%;
+}
+
+.dialog h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.dialog p {
+  margin: 0.65rem 0 0;
+  line-height: 1.4;
+}
+
+.hidden {
+  display: none;
+}
+
+.success {
+  color: var(--accent);
+}
